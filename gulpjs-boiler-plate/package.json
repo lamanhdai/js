@@ -1,0 +1,31 @@
+{
+  "name": "education_gulp",
+  "version": "1.0.0",
+  "description": "education gulp",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "uglify-js": "^3.0.15"
+  },
+  "scripts": {
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamanhdai/gulpjs/"
+  },
+  "keywords": [
+    "gulpjs"
+  ],
+  "author": "lamanhdai",
+  "license": "ISC"
+}
