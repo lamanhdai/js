@@ -1,17 +1,25 @@
 ## SET UP:
 - <u>step 1</u>: -----create file package json-----
 <p>open git bash, enter</p>
-```npm init```
+```
+npm init
+```
 
 
 - <u>step 2</u>: -----go to gulpfile.js and add all packages-----
 <p>For production environment enter</p>
-```npm install --save gulp-sass```
+```
+npm install --save gulp-sass
+```
 <p>For development environment enter</p>
-```npm install --save-dev gulp-sass```
+```
+npm install --save-dev gulp-sass
+```
 
 - <u>step 3</u>: -----run gulp command-----
-```gulp```
+```
+gulp
+```
 
 
 ## NOTE:
