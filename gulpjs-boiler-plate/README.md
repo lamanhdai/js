@@ -1,6 +1,6 @@
 ## SET UP:
 - <u>step 1</u>: -----create file package json-----
-<p>open git bash, enter</p>
+- - open git bash, enter
 <b>npm init</b>
 
 
