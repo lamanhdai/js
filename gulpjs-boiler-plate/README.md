@@ -13,7 +13,7 @@
 
 
 ## NOTE:
-+ To fix command not found: <a href="https://docs.npmjs.com/cli/link" target="_blank">npm link gulp</a>
-+ To <a href="https://babeljs.io/docs/usage/cli/" target="_blank">set up cli</a> and <a href="https://babeljs.io/docs/usage/babelrc/" target="_blank">add file</a> .babelrc: <a href="http://www.programwitherik.com/understanding-the-babel-compiler-2016/" target="_blank">echo '{ "presets": ["es2015"] }' > .babelrc</a>
-+ To add file .eslintrc report language ECMAScript: <a href="http://eslint.org/docs/user-guide/getting-started" target="_blank">eslint --init</a>
-+ To remove global package <a href="https://docs.npmjs.com/getting-started/uninstalling-global-packages" target="_blank">npm uninstall -g gulp</a>
++ To fix command not found: <a href="https://docs.npmjs.com/cli/link">npm link gulp</a>
++ To <a href="https://babeljs.io/docs/usage/cli/">set up cli</a> and <a href="https://babeljs.io/docs/usage/babelrc/">add file</a> .babelrc: <a href="http://www.programwitherik.com/understanding-the-babel-compiler-2016/">echo '{ "presets": ["es2015"] }' > .babelrc</a>
++ To add file .eslintrc report language ECMAScript: <a href="http://eslint.org/docs/user-guide/getting-started">eslint --init</a>
++ To remove global package <a href="https://docs.npmjs.com/getting-started/uninstalling-global-packages">npm uninstall -g gulp</a>
