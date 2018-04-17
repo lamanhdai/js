@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="https://demos.telerik.com/kendo-ui/grid/endless-scrolling-local">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.material.mobile.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
+    
+
+</head>
+<body>
+<script src="../content/shared/js/people.js"></script>
+<div id="example">
+    <div id="grid"></div>
+
+    <script>
+        $(function () {
+            var count = 5000;
+
+            if (kendo.support.browser.msie) {
+                if (kendo.support.browser.version < 10) {
+                    count = 1000;
+                } else {
+                    count = 2000;
+                }
+            }
+
+            $("#message").text(kendo.format("Generating {0} items", count));
+
+            generatePeople(count, function (data) {
+                var initStart;
+                var renderStart;
+                var lastId;
+               
+                $("#message").text("");
+
+                setTimeout(function () {
+                    initStart = new Date();
+                    lastId = data.length;
+                    $("#grid").kendoGrid({
+                        dataSource: {
+                            data: data,
+                            pageSize: 20,
+                            schema: {
+                                model: {
+                                    id: "Id",
+                                    fields: {
+                                        FirstName: { type: "string" },
+                                        LastName: { type: "string" },
+                                        City: { type: "string" },
+                                        Age: { type: "number" },
+                                        BirthDate: { editable: false },
+                                        Title: { type: "string" }
+                                    }
+                                }
+                            }
+                        },
+                        groupable: true,
+                        sortable: true,
+                        height: 550,
+                        scrollable: {
+                            endless: true
+                        },
+                        save: function (e) {
+                            if (e.model.isNew()) {
+                                lastId++;
+                                e.model.set("Id", lastId);
+                            }
+                        },
+                        pageable: {
+                            numeric: false,
+                            previousNext: false,
+                            messages: {
+                                display: "Showing {2} data items"
+                            }
+                        },
+                        editable: {
+                            mode: 'inline',
+                        },
+                        toolbar: ["create"],
+                        columns: [
+                            { field: "FirstName", title: "First Name", width: "130px" },
+                            { field: "LastName", title: "Last Name", width: "130px" },
+                            { field: "City", title: "City", width: "130px" },
+                            { field: "Title", width: "130px" },
+                            { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }
+                        ]
+                    });
+
+                    initEnd = new Date();
+
+                    $("#message").text(kendo.format("Kendo UI Grid bound to {0} items in {1} milliseconds", count, initEnd - initStart));
+                });
+            });
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>
