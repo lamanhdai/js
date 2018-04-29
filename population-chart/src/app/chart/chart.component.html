@@ -1,0 +1,16 @@
+<div>
+  search: {{initChart.name}}
+  <input [(ngModel)]="initChart.name" placeholder="name">
+
+  <p *ngIf="selectedChart">{{selectedChart.name}}</p>
+  <ul>
+    <li
+      *ngFor="let chart of charts"
+      (click)="onSelect(chart)"
+      [class.isSelected]="chart === selectedChart">
+      <label>
+        {{chart.name}}
+      </label>
+    </li>
+  </ul>
+</div>
