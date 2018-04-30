@@ -1,24 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { CHARTS } from '../chart-data';
+
 import { Chart } from '../chart';
+import { ChartService } from '../chart.service';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
 export class ChartComponent implements OnInit {
-  initChart: Chart = {
-    name: 'Vietnam'
-  };
-  charts = CHARTS;
+ 
   selectedChart: Chart;
+
+  charts: Chart[];
+
+  constructor(private chartService: ChartService) { }
+  
+  ngOnInit() {
+    this.getCharts();
+  }
 
   onSelect(chart: Chart): void {
     this.selectedChart = chart;
   }
-  constructor() { }
 
-  ngOnInit() {
+  getCharts(): void {
+    this.chartService.getCharts()
+      .subscribe(charts => this.charts = charts);
   }
 
 }

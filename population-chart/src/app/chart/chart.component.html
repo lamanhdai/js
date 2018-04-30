@@ -1,7 +1,5 @@
 <div>
-  search: {{initChart.name}}
-  <input [(ngModel)]="initChart.name" placeholder="name">
-
+  <app-search></app-search>
   <p *ngIf="selectedChart">{{selectedChart.name}}</p>
   <ul>
     <li
