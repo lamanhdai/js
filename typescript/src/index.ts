@@ -11,4 +11,9 @@
 // task.point = 1;
 // console.log(task.point);
 
-// import { generic } from './generic';
+import { show, GenericNumber } from './generic';
+show();
+let myGenericNumber = new GenericNumber<string>();
+myGenericNumber.zeroValue = 'b';
+myGenericNumber.add = function(x, y) { return x + y; };
+console.log(myGenericNumber.add('a','b'))
