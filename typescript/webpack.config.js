@@ -3,11 +3,7 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
   entry: {
-    'app' : './src/variable.ts'
-  },
-  output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'dist')
+    'app' : './src/case-01.ts'
   },
   module: {
     rules: [
@@ -17,11 +13,15 @@ module.exports = {
       }
     ],
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  mode: 'development',
+  output: {
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new CheckerPlugin()
   ],
-  mode: 'development'
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
 }
