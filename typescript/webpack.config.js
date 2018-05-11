@@ -3,7 +3,7 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
   entry: {
-    'app' : './src/case-01.ts'
+    'app' : './src/index.ts'
   },
   module: {
     rules: [
