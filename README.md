@@ -1,8 +1,9 @@
 # Some Note
 
 ## ES6
-
+<pre>
 /* ==================== VAR ==================== */
+
 var score = 100;
 if (score > 50) {
   var msg = "WIN";
@@ -12,6 +13,7 @@ console.log(score);
 console.log(msg);
 
 /* ==================== LET ==================== */
+
 let score = 100;
 let msg = "";
 if (score > 50) {
@@ -22,6 +24,7 @@ console.log(score);
 console.log(msg);
 
 /* ==================== CASE 04 ==================== */
+
 let todoObj = {
   id: 169,
   name: "Play football",
@@ -32,7 +35,7 @@ for (let index in todoObj) {
 }
 
 /* ==================== 01 Error ==================== */
-/*
+
 let student = {
   name: "John",
   courses: ["Android", "PHP", "Java"],
@@ -45,7 +48,7 @@ let student = {
 */
 
 /* ==================== 02 _this ==================== */
-/*
+
 let student = {
   name: "Peter",
   courses: ["Android", "PHP", "Java"],
@@ -59,7 +62,7 @@ let student = {
 */
 
 /* ==================== 03 bind ==================== */
-/*
+
 let student = {
   name: "Ronaldo",
   courses: ["Android", "PHP", "Java"],
@@ -72,6 +75,7 @@ let student = {
 */
 
 /* ==================== 04 Arrow Function ==================== */
+
 let student = {
   name: "josh",
   courses: ["Android", "PHP", "Java"],
@@ -88,6 +92,7 @@ student.showInfo();
 
 
 /* ==================== Class ==================== */
+
 class Student {
   constructor(code, name, age){
     this.code = code;
@@ -112,6 +117,7 @@ console.log(studentObj.showInfo());
 
 
 /* ==================== Inheritance ==================== */
+
 class Person {
 	constructor(name, code, age) {
 		this.name 	= name;
@@ -147,3 +153,4 @@ personObj.showInfo();
 
 let studentObj = new Student("peter", "123", 1998, 80);
 studentObj.showInfo();
+</pre>
