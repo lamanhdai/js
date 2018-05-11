@@ -1,0 +1,3 @@
+# Quick TS
+
+compile typescript
