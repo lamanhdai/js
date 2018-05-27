@@ -1,0 +1,13 @@
+td, th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+svg {
+  height: 200px;
+}
+
+.googlemap, .googlemap > div {
+  height: 200px;
+  width: 200px;
+}
