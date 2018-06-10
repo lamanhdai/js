@@ -11,10 +11,10 @@ class PostsNew extends Component {
     router: PropTypes.object
   }
 
-  onSubmit(props) {
+  onSubmitForm = (props) => {
     this.props.createPost(props)
     .then(() => {
-      this.context.router.push('/');
+      this.context.router.history.push('/');
     })
   }
   renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -30,7 +30,7 @@ class PostsNew extends Component {
   render() {
     const {fields: {title, categories, content}, handleSubmit}= this.props;
     return(
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <form onSubmit={handleSubmit(this.onSubmitForm)}>
         <h3>Create new post</h3>
         <Field name="title" type="text" component={this.renderField} label="Title"/>
         <Field name="categories" type="text" component={this.renderField} label="Categories"/>
