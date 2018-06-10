@@ -1,4 +1,4 @@
-import {FETCH_POSTS} from '../actions';
+import {FETCH_POSTS, CREATE_POSTS} from '../actions';
 
 const INITIAL_STATE = { all: [], post: null};
 
