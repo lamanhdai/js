@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Field, reduxForm} from 'redux-form';
 import {bindActionCreators} from 'redux';
 import {createPost} from '../actions';
@@ -6,6 +7,16 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 class PostsNew extends Component {
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
+  onSubmit(props) {
+    this.props.createPost(props)
+    .then(() => {
+      this.context.router.push('/');
+    })
+  }
   renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div className="form-group">
       <label>{label}</label>
@@ -19,7 +30,7 @@ class PostsNew extends Component {
   render() {
     const {fields: {title, categories, content}, handleSubmit}= this.props;
     return(
-      <form onSubmit={handleSubmit(this.props.createPost.bind(this))}>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <h3>Create new post</h3>
         <Field name="title" type="text" component={this.renderField} label="Title"/>
         <Field name="categories" type="text" component={this.renderField} label="Categories"/>
