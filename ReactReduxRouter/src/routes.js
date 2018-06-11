@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom'
 import App from './components/app';
 import PostsIndex from './components/PostsIndex';
 import PostsNew from './components/PostsNew';
+import PostsShow from './components/PostsShow';
 
 // nested route
 const Greeting = ({match}) => {
@@ -17,9 +18,10 @@ export default function routes(props) {
   return (
     <div>
       <Route exact path="/" component={App} />
-      <Route exact path="/" component={PostsIndex} />
+      <Route exact path="/posts" component={PostsIndex} />
       <Route path="/new" component={PostsNew} />
       <Route path="/greet" component={Greeting} />
+      <Route path="/posts/:id" component={PostsShow} />
     </div>
   );
 }
