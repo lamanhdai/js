@@ -6,9 +6,9 @@ import {Router, Switch} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Routes from './routes';
 import reducers from './reducers';
-import promise from 'redux-promise';
+import reduxThunk from 'redux-thunk';
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

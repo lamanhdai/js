@@ -13,9 +13,9 @@ class PostsNew extends Component {
 
   onSubmitForm = (props) => {
     this.props.createPost(props)
-    .then(() => {
-      this.context.router.history.push('/');
-    })
+    // .then(() => {
+    //   this.context.router.history.push('/');
+    // })
   }
   renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div className="form-group">
@@ -37,7 +37,7 @@ class PostsNew extends Component {
         <Field name="content" type="text" component={this.renderField} label="Content"/>
         <div className="form-group">
           <button type="submit" className="btn btn-primary">Submit</button>
-          <Link to="/" className="btn btn-danger">Back to list</Link>
+          <Link to="/posts" className="btn btn-danger">Back to list</Link>
         </div> 
       </form>
     )
