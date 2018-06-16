@@ -1,0 +1,20 @@
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  overflow: hidden;
+}
+
+li span {
+  float: left;
+}
+
+li button {
+  float: right;
+}
