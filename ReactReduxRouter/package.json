@@ -26,15 +26,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-preset-stage-1": "^6.1.18",
+    "babel-preset-stage-1": "^6.24.1",
     "lodash": "^3.10.1",
     "prop-types": "^15.6.1",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
-    "react-redux": "5.0.7",
-    "react-router-dom": "^4.2.2",
-    "redux": "4.0.0",
-    "redux-form": "^7.3.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0"
   }
 }
