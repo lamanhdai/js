@@ -10,12 +10,8 @@ class PostsNew extends Component {
   static contextTypes = {
     router: PropTypes.object
   }
-
   onSubmitForm = (props) => {
     this.props.createPost(props)
-    // .then(() => {
-    //   this.context.router.history.push('/');
-    // })
   }
   renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div className="form-group">
@@ -26,6 +22,9 @@ class PostsNew extends Component {
       </div>
     </div>
   )
+  redirect = () => {
+    this.context.router.history.push('/posts');
+  }
 
   render() {
     const {fields: {title, categories, content}, handleSubmit}= this.props;

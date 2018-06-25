@@ -10,10 +10,12 @@ class PostsIndex extends Component {
   renderPosts() {
     return this.props.posts.map(post => {
       return <li className="list-group-item" key={post.id}>
-        <Link to={`/posts/${post.id}`}>
+        <label className="label-post" htmlFor={post.id}>
           <span className="pull-xs-right">{post.categories}</span>
+          <input type="checkbox" id={post.id} className="checkbox-post" />
           <strong>{post.title}</strong>
-        </Link>
+        </label>
+        <Link to={`/posts/${post.id}`}>Read More</Link>
       </li>
     })
   }

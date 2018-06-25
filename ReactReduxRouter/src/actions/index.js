@@ -21,10 +21,10 @@ export function fetchPosts() {
 export function createPost(props) {
   const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, props)
   return (dispatch) => {
-    request.then(status => {
+    request.then(({status}) => {
       dispatch({
         type: CREATE_POSTS,
-        payload: request
+        payload: status
       })
     })
   }
@@ -33,10 +33,10 @@ export function createPost(props) {
 export function fetchPost(id) {
   const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
   return (dispatch) => {
-    request.then(status => {
+    request.then(({data}) => {
       dispatch({
         type: FETCH_POST,
-        payload: request
+        payload: data
       })
     })
   }
