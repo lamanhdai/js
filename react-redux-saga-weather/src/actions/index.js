@@ -20,9 +20,9 @@ function fetchWeather(city) {
 
 
 // worker saga: makes the api call when watcher saga sees the action
-function* workerSaga() {
+function* workerSaga(action) {
   try {
-    const response = yield call(fetchWeather);
+    const response = yield call(fetchWeather, action.payload.city);
     const weather = response.data;
 
     // dispatch a success action to the store with the new dog
