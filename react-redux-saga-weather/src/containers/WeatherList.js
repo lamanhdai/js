@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 class WeatherList extends Component {
   componentDidMount() {
-    const {getWeatherList} = this.props;
+    const {fetching, weather, error} = this.props;
     getWeatherList('');
   }
   render() {

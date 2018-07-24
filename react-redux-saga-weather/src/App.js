@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 import logo from './logo.svg';
 import './App.css';
 import reducer from './reducers';
-import mySaga from './sagas';
+import {watcherSaga} from './actions';
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -18,7 +18,7 @@ const store = createStore(
 )
 
 // then run the saga
-sagaMiddleware.run(mySaga)
+sagaMiddleware.run(watcherSaga)
 
 // render the application
 class App extends Component {
