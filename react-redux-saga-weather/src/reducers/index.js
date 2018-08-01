@@ -6,11 +6,11 @@ const initialState = {
   error: null
 };
 
-export default function(state = [], action) {
+export default function(state = initialState, action) {
   switch(action.type) {
     case FETCH_WEATHER_REQUEST: return { ...state, ftching: true, error: null };
-    case FETCH_WEATHER_SUCCESS: return { ...state, fetching: false, weather: action.payload };
+    case FETCH_WEATHER_SUCCESS: return { ...state, fetching: false, weather: action.weather };
     case FETCH_WEATHER_FAILURE: return { ...state, fetching: false, weather: null, error: action.error };
+    default: return state;
   }
-  return state;
 }
