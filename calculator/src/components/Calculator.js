@@ -53,11 +53,12 @@ class Calculator extends Component {
     let {historyLine, currentLine} = this.state;
     switch(value) {
       case '=':
+        if(!currentLine) return;
         const openParenthesis = (currentLine.match(/(\()/g) || []);
         const closeParenthesis = (currentLine.match(/(\))/g) || []);
         const word = (currentLine.match(/sin|cos|sqrt/g) || []);
-        if(openParenthesis.length !== closeParenthesis.length ||
-        openParenthesis.length !== word.length) return;
+        if((word.length !== closeParenthesis.length ||
+        openParenthesis.length !== word.length) && word.length) return;
         let newResult = math.eval(currentLine);
         currentLine = `${currentLine}=${newResult}`;
         this.updateResult(newResult,currentLine,historyLine);
