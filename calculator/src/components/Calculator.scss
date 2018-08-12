@@ -1,0 +1,27 @@
+.Calculator {
+  display: flex;
+  flex-flow: row wrap;
+  &__result {
+    text-align: right;
+    background-color: #eee;
+    box-sizing: border-box;
+    flex: 100% 0 0;
+    height: 80px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &__input {
+    flex: 25% 1 1;
+    text-align: center;
+  }
+  &__button {
+    width: 100%;
+    font-size: 18px;
+    height: 80px;
+  }
+  .history {
+    flex: 100% 0 0;
+  }
+}
