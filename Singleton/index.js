@@ -10,8 +10,8 @@ var Singleton = (function() {
     getInstance: function() {
       if(!instance) {
         instance = createInstance();
-        return instance;
       }
+      return instance;
     }
   }
 })();
