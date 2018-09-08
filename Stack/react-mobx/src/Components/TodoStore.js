@@ -1,10 +1,10 @@
-import {observable, computed} from 'mobx';
+import {observable, computed, autorun} from 'mobx';
 
 class ObservableTodoStore {
   @observable todos = [];
 
   constructor() {
-    mobx.autorun(() => console.log(this.report));
+    autorun(() => console.log(this.report));
   }
 
   @computed get completedTodosCount() {
