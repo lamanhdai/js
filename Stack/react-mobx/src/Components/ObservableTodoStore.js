@@ -1,7 +1,22 @@
 import {observable, computed, autorun} from 'mobx';
 
 class ObservableTodoStore {
-  @observable todos = [];
+  @observable todos = [
+    {
+      id: 0,
+      task: 'read Mobx concept',
+      completed: false,
+      assignee: null
+    },
+    {
+      id: 1,
+      task: 'try Mobx',
+      completed: false,
+      assignee: null
+    }
+  ];
+
+  @observable current = {index: 0};
 
   constructor() {
     autorun(() => console.log(this.report));
@@ -17,6 +32,10 @@ class ObservableTodoStore {
     if (!this.todos.length)
       return '<none>';
     return `Next todo: "${this.todos[0].task}". Progress: ${this.completedTodosCount}/${this.todos.length}`
+  }
+
+  @computed get track() {
+
   }
 
   addTodo(task) {
