@@ -6,16 +6,15 @@ import TodoItem from './TodoItem';
 @observer
 class TodoList extends Component {
   onChangeCurrent = (index) => {
-    const {current} = this.props;
-    console.log(index)
-    console.log(current)
-    // current.index = index;
+    const {store} = this.props;
+    store.current = index;
   }
   render () {
     const {store} = this.props;
     return(
       <div>
-        {store.report}
+        <div>{store.track}</div>
+        <div>{store.report}</div>
         <ul style={{listStyleType: 'none'}}>
           {
             store.todos.map(

@@ -16,10 +16,14 @@ class ObservableTodoStore {
     }
   ];
 
-  @observable current = {index: 0};
+  @observable current = 0;
 
   constructor() {
-    autorun(() => console.log(this.report));
+    autorun(() => {
+      console.log(this.report);
+      console.log('\n');
+      console.log(this.track);
+    });
   }
 
   @computed get completedTodosCount() {
@@ -35,7 +39,7 @@ class ObservableTodoStore {
   }
 
   @computed get track() {
-
+    return `Changed todo: "${this.current}"`
   }
 
   addTodo(task) {

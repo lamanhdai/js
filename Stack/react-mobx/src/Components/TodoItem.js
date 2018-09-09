@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {observer, observable} from 'mobx-react';
+import {observer} from 'mobx-react';
 
 @observer
 class TodoItem extends Component {
