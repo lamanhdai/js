@@ -154,7 +154,8 @@ personObj.showInfo();
 let studentObj = new Student("peter", "123", 1998, 80);
 studentObj.showInfo();
 
-/* ==================== Inheritance ==================== */
+
+/* ==================== Compare array ==================== */
 
 function array_diff(a, b) {
   const distance = a.length - b.length;
