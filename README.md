@@ -153,4 +153,28 @@ personObj.showInfo();
 
 let studentObj = new Student("peter", "123", 1998, 80);
 studentObj.showInfo();
+
+/* ==================== Inheritance ==================== */
+
+function array_diff(a, b) {
+  const distance = a.length - b.length;
+  let maxArr, minArr;
+  if(distance < 0) {
+    maxArr = b;
+    minArr = a;
+  } else {
+    maxArr = a;
+    minArr = b;
+  }
+  let arr = [];
+  minArr.forEach((value, index) => {
+    if(value - maxArr[index]) {
+      arr.push(value);
+      arr.push(maxArr[index]);
+    }
+  });
+  arr = [...arr, ...maxArr.slice(minArr.length||1-1, maxArr.length||1-1)];
+  const newArr = new Set(arr);
+  return [...newArr];
+}
 </pre>
