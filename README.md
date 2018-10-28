@@ -160,4 +160,9 @@ studentObj.showInfo();
 var arr = [1,2,NaN];
 arr.includes(NaN) // true
 arr.indexOf(NaN) // -1 wrong search
+
+
+/* ==================== exponentiation operator ==================== */
+// instead use Math.pow(7, 2) = 7^2 we can reduce by this line
+7**2
 </pre>
