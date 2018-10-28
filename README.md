@@ -155,27 +155,9 @@ let studentObj = new Student("peter", "123", 1998, 80);
 studentObj.showInfo();
 
 
-/* ==================== Compare array ==================== */
-
-function array_diff(a, b) {
-  const distance = a.length - b.length;
-  let maxArr, minArr;
-  if(distance < 0) {
-    maxArr = b;
-    minArr = a;
-  } else {
-    maxArr = a;
-    minArr = b;
-  }
-  let arr = [];
-  minArr.forEach((value, index) => {
-    if(value - maxArr[index]) {
-      arr.push(value);
-      arr.push(maxArr[index]);
-    }
-  });
-  arr = [...arr, ...maxArr.slice(minArr.length||1-1, maxArr.length||1-1)];
-  const newArr = new Set(arr);
-  return [...newArr];
-}
+/* ==================== includes function of array ==================== */
+// Comparing with indexOf, includes can check NaN in array
+var arr = [1,2,NaN];
+arr.includes(NaN) // true
+arr.indexOf(NaN) // -1 wrong search
 </pre>
