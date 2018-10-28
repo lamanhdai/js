@@ -165,4 +165,17 @@ arr.indexOf(NaN) // -1 wrong search
 /* ==================== exponentiation operator ==================== */
 // instead use Math.pow(7, 2) = 7^2 we can reduce by this line
 7**2
+
+
+
+/* ==================== ES8 transform Object to Map with Object.entries ==================== */
+const cars = {'BMW': 3, 'Tesla': 2};
+// instead use ES6
+const map1 = new Map();
+Object.keys(cars).forEach(key => map1.set(key, cars[keys]));
+console.log(map1);
+
+// ES8
+const map = new Map(Object.entries(cars));
+console.log(map); // {'BMW'=>3, 'Tesla'=>2};
 </pre>
