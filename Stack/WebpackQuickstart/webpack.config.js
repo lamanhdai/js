@@ -33,12 +33,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
-            options: {
-              minimize: {
-                safe: true
-              }
-            }
+            loader: 'css-loader'
           },
           {
             loader: 'postcss-loader',
@@ -52,8 +47,7 @@ module.exports = {
             }
           },
           {
-            loader: 'sass-loader',
-            options: {}
+            loader: 'sass-loader'
           }
         ]
       }
