@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack"
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,6 @@
     "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^2.0.2",
     "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
