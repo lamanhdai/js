@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const autoprefixer = require("autoprefixer")
-const CopyWebpackPugin = require("copy-webpack-plugin")
 const path = require("path")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CopyWebpackPugin = require("copy-webpack-plugin")
+const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
