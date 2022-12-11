@@ -1,0 +1,7 @@
+{
+  "manifest_version": 3,
+  "description": "auto populate form",
+  "version": "2.0",
+  "short_name": "React App",
+  "name": "auto populate form"
+}

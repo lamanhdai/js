@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "description": "auto populate form",
+  "version": "2.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "short_name": "React App",
+  "name": "auto populate form",
+  "host_permissions": [
+    "https://developer.chrome.com/*"
+  ],
+  "permissions": [
+    "tabGroups"
+  ]
+}

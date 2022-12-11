@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "description": "calculating the reading time",
+  "version": "2.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "favicon.ico",
+      "32": "favicon.ico",
+      "48": "logo192.png",
+      "128": "logo192.png"
+    }
+  },
+  "short_name": "React App",
+  "name": "calculating the reading time",
+  "icons": {
+    "16": "favicon.ico",
+    "32": "favicon.ico",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["readingTime.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
